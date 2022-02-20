@@ -13,7 +13,6 @@ public class BoardDownloadController implements Controller{
 	public void Execute(HttpServletRequest req, HttpServletResponse resp) {
 		
 		//1 파라미터 
-
 		
 		//2 입력값 x
 		
@@ -21,11 +20,8 @@ public class BoardDownloadController implements Controller{
 		BoardService service = BoardService.getInstance();
 		service.Download(req,resp);
 		
-		
 		//4 이동 
 		
-		
-
 	}
 
 }

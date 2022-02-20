@@ -36,7 +36,6 @@ public class BoardService {
 	}
 	//싱글톤 패턴 끝
 	
-	
 	//게시물 읽어오기(start,end)
 	public Vector<BoardVO> getBoardList(int start, int end){
 		return dao.getBoardList(start,end);
@@ -93,7 +92,6 @@ public class BoardService {
 		FileInputStream fin = new FileInputStream(filepath);//파일 -> 서버 방향의 스트림
 		ServletOutputStream bout = resp.getOutputStream(); //서버 -> 클라이언트(브라우저) 방향의 스트림
 				
-		System.out.println("!!!!!!!!!!!!!!!");
 		int read;
 		while(true)
 		{
@@ -107,7 +105,7 @@ public class BoardService {
 		bout.close();
 		fin.close();
 				
-		System.out.println("다운로드 완료!");
+		System.out.println("다운로드 완료");
 				
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -125,12 +123,6 @@ public class BoardService {
 	public Vector<ReplyVO> getReplyList(int num){
 		return dao.getReplyList(num);
 	}
-	
-	
-	
-
-	
-	
 	
 
 }

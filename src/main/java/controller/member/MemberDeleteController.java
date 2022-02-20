@@ -9,7 +9,6 @@ public class MemberDeleteController implements Controller{
 	@Override
 	public void Execute(HttpServletRequest req, HttpServletResponse resp) {
 		System.out.println("회원삭제컨트롤러");
-		
 	}
 
 }

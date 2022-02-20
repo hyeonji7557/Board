@@ -44,7 +44,6 @@ public class BoardListController implements Controller{
 				req.setAttribute("tcnt", tcnt);
 				HttpUtil.Forward(req, resp, "/WEB-INF/View/board/list.jsp?nowPage=" + nowPage);
 		
-		
 	}
 
 }

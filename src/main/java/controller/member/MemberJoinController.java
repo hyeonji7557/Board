@@ -13,7 +13,6 @@ public class MemberJoinController  implements Controller{
 
 	@Override
 	public void Execute(HttpServletRequest req, HttpServletResponse resp) {
-//		System.out.println("회원가입컨트롤러");
 			
 		//01 파라미터 받기
 		String email = req.getParameter("email");
@@ -29,9 +28,8 @@ public class MemberJoinController  implements Controller{
 			||addr1.isEmpty()||req.getParameter("zipcode").isEmpty()
 		)
 		{
-			req.setAttribute("MSG", "입력값이 올바르지 않습니다..");
+			req.setAttribute("MSG", "입력값이 올바르지 않습니다");
 			HttpUtil.Forward(req, resp, "/Login.jsp"); 
-			
 		}
 			
 		//03 서비스 작업
@@ -43,7 +41,6 @@ public class MemberJoinController  implements Controller{
 		try {
 			resp.sendRedirect("Login.jsp");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	

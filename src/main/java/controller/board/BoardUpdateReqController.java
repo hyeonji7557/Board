@@ -21,7 +21,7 @@ public class BoardUpdateReqController implements Controller{
 		}
 		else 
 		{
-			//게시물 패스워드 확인..
+			//게시물 패스워드 확인
 			String curpwd = req.getParameter("pwd");
 			HttpSession session = req.getSession();
 			BoardVO vo = (BoardVO)session.getAttribute("BoardVO");
@@ -35,7 +35,7 @@ public class BoardUpdateReqController implements Controller{
 				return ;
 			}else {
 				//패스워드 불일치
-				req.setAttribute("MSG", "패스워드가 일치하지 않습니다..");
+				req.setAttribute("MSG", "패스워드가 일치하지 않습니다");
 				int num = vo.getNum();
 				String start = req.getParameter("start");
 				String end =req.getParameter("end");

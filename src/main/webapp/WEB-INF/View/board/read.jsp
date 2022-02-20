@@ -98,9 +98,6 @@
 <!--page-contents 끝  -->
 </div>
 
-
-
-
 <!-- Reply -->
 <script>
 
@@ -116,7 +113,7 @@
 				
 			},
 			error:function(){
-				alert("문제발생!");	
+				alert("문제발생");	
 			}
 		});
 	}
@@ -131,7 +128,7 @@
 				$('#comment').val('');
 			},
 			error:function(){
-				alert("문제발생!");	
+				alert("문제발생");	
 			}
 		});
 	}
@@ -166,8 +163,6 @@
 
 <!-- container-fluid 끝 -->
 </div>
-
-
 
 
 

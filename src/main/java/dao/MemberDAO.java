@@ -102,8 +102,5 @@ public class MemberDAO {
 	}
 	//회원 수정
 	//회원 삭제
-	
-	
-	
 
 }

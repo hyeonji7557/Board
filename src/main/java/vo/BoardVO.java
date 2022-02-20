@@ -12,7 +12,6 @@ public class BoardVO {
 	private String filename;
 	private int filesize;
 
-
 	public BoardVO(int num, String email,String pwd, String subject, String content, String regdate, String ip, int count,
 			String filename, int filesize) {
 		super();
@@ -28,18 +27,12 @@ public class BoardVO {
 		this.filesize = filesize;
 	}
 	
-
 	public BoardVO(int num, String subject, String content) {
 		super();
 		this.num = num;
 		this.subject = subject;
 		this.content = content;
 	}
-
-
-	
-	
-
 
 	public int getNum() {
 		return num;
@@ -78,8 +71,6 @@ public class BoardVO {
 				+ ", regdate=" + regdate + ", ip=" + ip + ", count=" + count + ", filename=" + filename + ", filesize="
 				+ filesize + "]";
 	}
-	
-	
 	
 	
 	

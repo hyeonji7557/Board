@@ -19,7 +19,7 @@ public class BoardDeleteReqController implements Controller{
 		}
 		else 
 		{
-			//게시물 패스워드 확인..
+			//게시물 패스워드 확인
 			String curpwd = req.getParameter("pwd");
 			HttpSession session = req.getSession();
 			BoardVO vo = (BoardVO)session.getAttribute("BoardVO");

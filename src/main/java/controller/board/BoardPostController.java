@@ -9,8 +9,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import service.BoardService;
 
-
-
 public class BoardPostController implements Controller{
 
 	@Override
@@ -24,15 +22,13 @@ public class BoardPostController implements Controller{
 			return ;
 		
 		}
-		else //폼에 입력다 한다음 Post처리요청
+		else //폼에 입력다 한다음 Post 처리요청
 		{		
 			//입력값검증
 			
 			//서비스실행
 			BoardService service = BoardService.getInstance();
 			service.BoardPost(req);
-			
-			
 			try {
 				resp.sendRedirect("/Board/list.do");
 				return ;
@@ -40,7 +36,6 @@ public class BoardPostController implements Controller{
 				e.printStackTrace();
 			}
 		}
-	
 		
 	}
 

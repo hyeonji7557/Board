@@ -9,10 +9,7 @@ public class NoticePostController implements Controller{
 
 	@Override
 	public void Execute(HttpServletRequest req, HttpServletResponse resp) {
-		//
-		//
-		//
-		//
+		
 		HttpUtil.Forward(req, resp, "/WEB-INF/View/notice/post.jsp");
 		
 	}

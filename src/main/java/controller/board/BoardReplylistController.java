@@ -41,7 +41,6 @@ public class BoardReplylistController implements Controller{
 				out.print("</div>");
 			}
 			
-		
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

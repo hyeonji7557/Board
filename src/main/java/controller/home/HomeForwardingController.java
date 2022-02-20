@@ -9,11 +9,7 @@ public class HomeForwardingController implements Controller{
 
 	@Override
 	public void Execute(HttpServletRequest req, HttpServletResponse resp) {
-		//
-		//
-		//
-		//
-		//
+		
 		//View로이동
 		HttpUtil.Forward(req, resp, "/WEB-INF/View/usermain.jsp");
 		

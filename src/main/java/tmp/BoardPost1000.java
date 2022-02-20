@@ -6,7 +6,7 @@ import java.sql.*;
 public class BoardPost1000 {
 
 	public static void main(String[] args) {
-		String url = "jdbc:mysql://3.36.137.234:3330/shopdb";
+		String url = "jdbc:mysql://3.36.137.234:3306/shopdb";
 		String id = "dbconn";
 		String pw = "Zhfldk11!";
 		
@@ -16,7 +16,6 @@ public class BoardPost1000 {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(url,id,pw);
-			
 			for(int i=1;i<=1000;i++) {
 			pstmt=conn.prepareStatement("insert into board_tbl values(null,?,?,?,?,?,?,?,?,?)");
 			pstmt.setString(1,"b"+i+"@naver.com");

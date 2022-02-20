@@ -30,11 +30,8 @@ public class MemberService {
 		return dao.MemberSearch(email);
 		
 	}
-	
-	
 	//회원삭제함수
 	//회원수정함수
-	
 	
 
 }

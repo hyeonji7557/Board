@@ -21,7 +21,6 @@ public class AuthorityFilter implements Filter{
 	//2 : ADMIN
 	Map<String,Integer> RoleMap = new HashMap();
 	
-	
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 		//공지사항 페이지 권한
@@ -65,10 +64,10 @@ public class AuthorityFilter implements Filter{
 			
 			//접근 금지 처리
 			if(pagerole>=1 && myrole==0) {
-				throw new ServletException("익명계정 권한으로는 접근이 불가능합니다..");
+				throw new ServletException("익명계정 권한으로는 접근이 불가능합니다");
 			}
 			else if(pagerole==2&&myrole<2) {
-				throw new ServletException("관리자만 접근할 수 있는 페이지입니다..");
+				throw new ServletException("관리자만 접근할 수 있는 페이지입니다");
 			}
 		
 		

@@ -35,9 +35,6 @@ public class BoardDeleteController implements Controller{
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			
-		
-		
 		
 	}
 

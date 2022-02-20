@@ -181,7 +181,6 @@ public class BoardDAO {
 			pstmt.setInt(7, filesize);
 			pstmt.executeUpdate();
 			
-		
 		}catch(Exception e) {
 			
 		}finally {
@@ -231,9 +230,7 @@ public class BoardDAO {
 		Connection conn=null;
 		PreparedStatement pstmt = null;
 		
-		
 		try {
-			
 			conn=ds.getConnection();
 			pstmt=conn.prepareStatement("update board_tbl set count=count+1 where num=?");
 			pstmt.setInt(1, num);

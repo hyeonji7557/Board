@@ -19,13 +19,11 @@ public class BoardUpdateController implements Controller{
 		if(flag!=null)	//update.jsp 폼띄우기
 		{
 			HttpUtil.Forward(req, resp, "/WEB-INF/View/board/update.jsp");
-			System.out.println("!!!!!!!!!!!!!!!!!!!!");
 			return ;
 		}
 		else //update버튼 누른경우
 		{
 			//파라미터
-			
 			String subject = req.getParameter("subject");
 			String content = req.getParameter("content");
 			
@@ -34,6 +32,7 @@ public class BoardUpdateController implements Controller{
 				//잘못된 입력 메시지 처리
 				//Updateform페이지로 이동..
 			}
+			
 			//서비스
 			BoardService service = BoardService.getInstance();
 			HttpSession session = req.getSession();
@@ -41,7 +40,7 @@ public class BoardUpdateController implements Controller{
 			BoardVO vo = new BoardVO(boardvo.getNum(),subject,content);
 			service.BoardUpdate(vo);
 			
-			//이동(읽고있는 페이지로 이동~)
+			//이동(읽고있는 페이지로 이동)
 			try {
 				int num = boardvo.getNum();
 				String nowPage = req.getParameter("nowPage");
